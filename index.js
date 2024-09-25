@@ -2,7 +2,7 @@ function getInputValue(id) {
     return parseFloat(document.getElementById(id).value);
 }
 
-function getInnerTex(id) {
+function getInnerText(id) {
     return parseFloat(document.getElementById(id).innerText);
 }
 
@@ -33,7 +33,7 @@ const noakhaliDonate = document.getElementById('btn-noakhali-donate')
     .addEventListener('click', function () {
         console.log('noakhali clicked')
         const noakhaliInput = getInputValue('input-noakhali');
-        const totalDonateAmount = getInnerTex('donate-amount-noakhali');
+        const totalDonateAmount = getInnerText('donate-amount-noakhali');
         const donate = noakhaliInput + totalDonateAmount;
         const mainBalance = getMainBalanceById('current-balance');
         const updateBalance = mainBalance - noakhaliInput;
@@ -57,6 +57,7 @@ const noakhaliDonate = document.getElementById('btn-noakhali-donate')
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
         donation_modal.showModal();
+        document.getElementById('input-noakhali').value='';
     });
 
 
@@ -64,7 +65,7 @@ const noakhaliDonate = document.getElementById('btn-noakhali-donate')
 const feniDonate = document.getElementById('input-feni')
     .addEventListener('click', function () {
         const feniInput = getInputValue('feni-input');
-        const feniDonation = getInnerTex('donate-amount-feni');
+        const feniDonation = getInnerText('donate-amount-feni');
         const totalDonateAmount = feniInput + feniDonation;
         const mainBalance = getMainBalanceById('current-balance');
         const updateBalance = mainBalance - feniInput;
@@ -89,11 +90,12 @@ const feniDonate = document.getElementById('input-feni')
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
         donation_modal.showModal();
+        document.getElementById('feni-input').value='';
     });
 
 const quotaMovementDonation = document.getElementById('btn-quota').addEventListener('click', function () {
         const quotaInput = getInputValue('input-quota');
-        const quotaDonated = getInnerTex('quota-inner-amount');
+        const quotaDonated = getInnerText('quota-inner-amount');
         const totalquotaDonated = quotaInput + quotaDonated;
         const mainBalance = getMainBalanceById('current-balance');
         const updateBalance = mainBalance - quotaInput;
@@ -121,4 +123,5 @@ const quotaMovementDonation = document.getElementById('btn-quota').addEventListe
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
         donation_modal.showModal();
+        document.getElementById('input-quota').value=''; 
     });
