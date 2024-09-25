@@ -56,7 +56,7 @@ const noakhaliDonate = document.getElementById('btn-noakhali-donate')
             `
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
-
+        donation_modal.showModal();
     });
 
 
@@ -88,11 +88,12 @@ const feniDonate = document.getElementById('input-feni')
             `
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
+        donation_modal.showModal();
     });
 
-const cotaMovement = document.getElementById('btn-quota').addEventListener('click', function () {
+const quotaMovementDonation = document.getElementById('btn-quota').addEventListener('click', function () {
         const quotaInput = getInputValue('input-quota');
-        const  quotaDonated = getInnerTex('quota-inner-amount');
+        const quotaDonated = getInnerTex('quota-inner-amount');
         const totalquotaDonated = quotaInput + quotaDonated;
         const mainBalance = getMainBalanceById('current-balance');
         const updateBalance = mainBalance - quotaInput;
@@ -119,4 +120,5 @@ const cotaMovement = document.getElementById('btn-quota').addEventListener('clic
             `
         const historyContainer = document.getElementById('history-list');
         historyContainer.insertBefore(historyItem, historyContainer.lastChild);
+        donation_modal.showModal();
     });
