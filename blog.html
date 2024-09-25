@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Daisy UI cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        body {
+            font-family: "Lexend", system-ui;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="bg-[#F9F7F3] py-4">
+                <div class="w-11/12 mx-auto flex justify-between ">
+
+                    <a href="./index.html"><button id="blog-btn"
+                            class="bg-[#B4F461] rounded-md py-2 px-4 ">Home</button></a>
+                    <div class="flex justify-center items-center">
+                        <img src="./assets/logo.png" alt="" class="w-8 ">
+                        <p class="font-semibold hidden md:block">Donate Bangladesh</p>
+                    </div>
+                    <p class="flex gap-2 items-center"><img src="./assets/coin.png" alt=""> <span
+                            id="nav-amount">95000</span>BDT
+                    </p>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <div class="mt-20 md:container mx-auto">
+            <div class="flex my-12">
+                <!-- <h1 class="flex text-4xl font-bold mt-2">Important FAQ <img class=" m-0 my-1 h-16 w-20 " src="./assets/chat.png" alt=""></h1> -->
+                <h1 class="flex text-5xl font-bold mt-2 ml-2">Important FAQ</h1>
+                <img class="m-0 my-1 h-16 w-20" src="./assets/chat.png" alt="">
+            </div>
+
+            <div class="border p-3 rounded-lg">
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)??</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for web documents. It represents
+                            the structure of a webpage as a tree of objects, where each object corresponds to a part of
+                            the document, such as elements, attributes, and text. The DOM allows developers to interact
+                            with and manipulate the content, structure, and styling of a webpage dynamically, using
+                            languages like JavaScript. Through the DOM, you can modify HTML and CSS on the fly, change
+                            the appearance of elements, or even create new content. Essentially, the DOM bridges the gap
+                            between HTML/CSS and programming, making webpages interactive and responsive to user inputs.
+                        </p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                    <div class="collapse-title text-xl font-medium">How do you select an Element from the DOM??</div>
+                    <div class="collapse-content">
+                        <p>To select an element from the DOM, you use various methods provided by JavaScript, each
+                            tailored to different types of elements. For example, you can select an element by its
+                            unique ID, by its class name, by the tag name, or by more complex CSS selectors. The most
+                            commonly used methods are selecting by ID, which targets a specific element, or by class and
+                            tag name, which can target multiple elements. Additionally, you can use query selectors to
+                            retrieve elements based on CSS-style selectors for more flexible and powerful selection
+                            options.</p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                    <div class="collapse-title text-xl font-medium">What is Event delegation in the text of the DOM, and
+                        why it is usefull??</div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique in the DOM where you attach a single event listener to a
+                            parent element rather than individual child elements. When an event is triggered by one of
+                            the child elements, it "bubbles up" to the parent, and the parent can handle the event based
+                            on which child triggered it.</p>
+                    </div>
+                </div>
+                <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an Element's attribute and
+                        styles using the DOM??</div>
+                    <div class="collapse-content">
+                        <p>To manipulate an element's attributes using the DOM, you can modify its properties directly
+                            or use specific methods to change or remove attributes. For instance, you can change an
+                            image's source, update the href of a link, or alter form input attributes like placeholder
+                            or value. You can also add or remove attributes dynamically, such as adding a disabled state
+                            to a button.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
