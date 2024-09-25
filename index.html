@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!--DaisyUI cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header class="sticky top-0 z-10 bg-slate-50 shadow-sm pb-3">
+        <!-- nav section -->
+        <nav>
+            <div class="bg-[#F9F7F3] py-4">
+                <div class="w-11/12 mx-auto flex justify-between ">
+                    <a href=""><button id="blog-btn" class="bg-[#B4F461] rounded-md py-2 px-4 ">Blog</button></a>
+                    <div class="flex justify-center items-center">
+                        <img src="/assets/logo.png" alt="" class="w-8 ">
+                        <p class="font-semibold hidden md:block">Donate Bangladesh</p>
+                    </div>
+                    <p class="flex gap-2 items-center"><img src="./assets/coin.png" alt=""> <span
+                            id="current-balance">10000</span>USD</p>
+                </div>
+            </div>
+
+        </nav>
+
+        <!-- button section -->
+        <div class="mt-10 flex justify-center gap-4 ">
+            <button id="btn-donation" class="btn bg-[#B4F461] font-semibold">Donation</button>
+
+            <button id="btn-history" class="btn">History</button>
+        </div>
+
+    </header>
+    <main class="w-10/12 mx-auto mt-8 ">
+        <div id="donation-tab">
+            <div class="grid lg:grid-cols-2 rounded-lg bg-white border  gap-4 shadow-md p-3">
+                <div>
+                    <img src="/assets/noakhali.png" alt="" class="h-full">
+                </div>
+                <div>
+                    <button class="btn"><img src="/assets/coin.png" alt=""> <span id="donate-amount-noakhali">0</span>
+                        USD</button>
+    
+                    <h2 class="font-bold ">Donate for Flood at Noakhali, Bangladesh</h2>
+    
+                    <p class="text-[#111111B3]"> The recent floods in Noakhali have caused significant damage to homes
+                        infrastructure. Your donation will help provide essential supplies and to those affected by this
+                        disaster. Every contribution, big or small, makes difference. Please join us in supporting the
+                        relief efforts and making a positive impact on the lives of those in need.</p>
+    
+                    <input id="input-noakhali" type="text" name="" id="" placeholder="Write Donation Amount"
+                        class="w-full p-2 rounded-md border  mt-2">
+    
+                    <button onclick="" id="btn-noakhali-donate" class="btn w-full mt-2 bg-[#B4F461] font-semibold">Donate
+                        Now</button>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-2 rounded-lg bg-white border  gap-4 shadow-md p-3  my-4">
+                <div>
+                    <img src="/assets/feni.png" alt="" class="h-full">
+                </div>
+                <div>
+                    <button class="btn"><img src="/assets/coin.png" alt=""> <span id="donate-amount-feni">0</span>
+                        USD</button>
+    
+                    <h2 class="font-bold ">Donate for Flood Relief in Feni,Bangladesh</h2>
+    
+                    <p class="text-[#111111B3]"> The flooding began on the afternoon of August 20, rapidly worsening by the
+                        next day. The upazilas of Parshuram, Phulgazi, and Chagalnaya were the most affected. However, the
+                        floodwaters soon spread to Feni Sadar, Sonagazi, and Daganbhuiyan, creating a severe humanitarian
+                        crisis for the residents of Feni.</p>
+    
+                    <input type="text" name="" id="feni-input" placeholder="Write Donation Amount"
+                        class="w-full p-2 rounded-md border  mt-2">
+    
+                    <button id="input-feni" class="btn w-full mt-2 bg-[#B4F461] font-semibold">Donate Now</button>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-2 rounded-lg bg-white border  gap-4 shadow-md p-3">
+                <div>
+                    <img src="/assets/quota-protest.png" alt="" class="h-full">
+                </div>
+                <div>
+                    <button class="btn"><img src="/assets/coin.png" alt=""> <span id="quota-inner-amount">0</span>
+                        USD</button>
+    
+                    <h2 class="font-bold ">Aid for Injured in the Quota Movement</h2>
+    
+                    <p class="text-[#111111B3] mt-2"> Medical Aid: Many injured protesters are being treated at the National
+                        Institute of Traumatology and Orthopaedic Rehabilitation (NITOR) in Dhaka. Hospitals have been
+                        providing care to those severely affected.
+    
+                        Financial Support: Crowdfunding campaigns,aim to raise funds for 100 victims receiving treatment.
+                        The campaign has garnered donations to help with medical costs and recovery​(
+                        GoFundMe
+                        ).</p>
+    
+                    <input id="input-quota" type="text" name="" id="" placeholder="Write Donation Amount"
+                        class="w-full p-2 rounded-md border mt-2">
+    
+                    <button id="btn-quota" class="btn w-full mt-2 bg-[#B4F461] font-semibold">Donate Now</button>
+                </div>
+            </div>
+        </div>
+ 
+
+        <!-- Donation history -->
+        <div id="history-tab" class=" hidden rounded-md shadow-sm mt-5 py-3">
+            <div id="history-list" class="mt-2 w-8/12 mx-auto ">
+            </div>
+        </div>
+    </main>
+
+    <script src="/index.js"></script>
+</body>
+</body>
+
+</html>
